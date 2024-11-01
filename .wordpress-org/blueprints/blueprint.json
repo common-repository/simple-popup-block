@@ -1,0 +1,30 @@
+{
+    "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+    "features": {
+      "networking": true
+    },
+    "steps": [
+      {
+        "step": "login"
+      },
+      {
+        "step": "installPlugin",
+        "pluginZipFile": {
+          "resource": "wordpress.org/plugins",
+          "slug": "simple-popup-block"
+        },
+        "options": {
+          "activate": true
+        }
+      },
+      {
+        "step": "importFile",
+        "file": {
+          "resource": "url",
+          "url": "https://gist.githubusercontent.com/sachyya/5b8378a86c1e56a444ccaff3b4b9e21e/raw/f78381cced0b15e26619370d7bd9c1bfcdeeeced/demo-content.xml"
+        }
+      }
+    ],
+    "landingPage": "/?page_id=8"
+  }
+  
